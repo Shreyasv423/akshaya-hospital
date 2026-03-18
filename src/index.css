@@ -1,0 +1,22 @@
+@import "tailwindcss";
+@import "tailwindcss/theme.css";
+
+@theme {
+  --color-brand-blue: #0f4c81;
+  --color-brand-green: #10b981;
+  --color-brand-green-light: #34d399;
+  --color-brand-dark: #1e293b;
+  --color-brand-gray: #f8fafc;
+}
+
+body {
+  font-family: 'Inter', system-ui, Avenir, Helvetica, Arial, sans-serif;
+  margin: 0;
+  display: flex;
+  min-width: 320px;
+  min-height: 100vh;
+}
+
+#root {
+  width: 100%;
+}
