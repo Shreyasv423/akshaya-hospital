@@ -4,7 +4,28 @@
     <meta charset="UTF-8" />
     <link rel="icon" type="image/png" href="/photo.png" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Akshaya Hospital</title>
+    <title>Akshaya Hospital - Multispeciality Healthcare in Mysore</title>
+    <script>
+      // Automatically unregister stale service workers from any previous localhost projects that hijack fetch requests
+      if ('serviceWorker' in navigator) {
+        navigator.serviceWorker.getRegistrations().then(function (registrations) {
+          for (var registration of registrations) {
+            registration.unregister().then(function (success) {
+              if (success) {
+                console.log('Unregistered stale service worker on localhost');
+              }
+            });
+          }
+        });
+      }
+      if ('caches' in window) {
+        caches.keys().then(function (names) {
+          for (var name of names) {
+            caches.delete(name);
+          }
+        });
+      }
+    </script>
   </head>
   <body>
     <div id="root"></div>
